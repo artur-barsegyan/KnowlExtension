@@ -1,143 +1,15 @@
 <html>
 <head>
-	<style type="text/css" src="popup.css">
-		.sectionDivider {
-		    border: none;
-		    background-color: white;
-		    height: 1px;
-		    margin-top: 5px;
-		    margin-bottom: 12px;
-		    opacity: .5;
-		}
-
-		#kdb-saveButton {
-			align-self: flex-end;
-			font-size: 12px;
-			width: 60px;
-		}
-
-		#kdb-annotation-note {
-			border-radius: 3px;
-			font-family: 'Open Sans', sans-serif;
-			padding-left: 5px;
-			padding-right: 5px;
-			padding-top: 3px;
-			padding-bottom: 3px;
-		}
-
-		#closeButtonContainer {
-			/* float: right; */
-			margin-left: -30px;
-			left: 100%;
-			display: flex;
-    		flex-direction: row;
-		}
-
-		#kdb-popup-label {
-			margin: 0px;
-			color: white;
-			/* max-width: 280px; */
-			text-align: left;
-			align-self: flex-start;
-			flex: 2;
-			font-size: 16;
-		}
-
-		.kdb-popup-footer {
-			width: inherit;
-			margin-top: 6px;
-			display: flex;
-		    flex-direction: row;
-			justify-content: flex-end;
-		}
-
-		.closeButtonIcon {
-			height: 10px;
-			width: 10px;
-			top: 10px;
-			right: 10px;
-			padding: 7px;
-			align-self: flex-end;
-		}
-
-		.kdb-popup-header {
-			/* margin-top: 2px; */
-			width: inherit;
-			height: 22px;
-
-			display: flex;
-		    flex-direction: row;
-			flex-wrap: nowrap;
-		    justify-content: flex-start;
-			align-items: center;
-		}
-
-		.kdb-popup-body {
-			width: inherit;
-		    margin-top: 4px;
-			margin-bottom: 4px;
-			display: flex;
-			flex-direction: column;
-		}
-
-		/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:300'); */
-		.kdb-popup-window {
-			margin: 0px;
-			position: fixed;
-			min-width: 300px;
-			width: 400px;
-			background: rgba(128,179,46,.95);
-			border-radius: 6px;
-			padding: 10px;
-			box-shadow: 0 1px 10px 0 rgba(0,0,0,.5);
-			font-family: 'Open Sans', sans-serif;
-			user-select: none;
-		}
-
-		.kdb-popup-tag {
-			border-radius: 7px;
-			background: white;
-			border: 2px solid white;
-			padding: 1px;
-			font-size: 10px;
-
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-		}
-
-		.kdb-tag-color {
-			background: radial-gradient(7em 7em at 35% 35%, blue 50%, transparent 50%);
-
-		}
-
-		.kdb-popup-tags-list {
-			margin-top: 7px;
-			display: flex;
-			flex-direction: row;
-		}
-
-		.kdb-circle {
-			min-width: 3px;
-			min-height: 3px;
-			width: 5px;
-			height: 5px;
-			margin-left: 3px;
-			margin-right: 3px;
-			background: blue;
-			border-radius: 50%;
-		}
-	</style>
+	<!-- <link rel="stylesheet" type="text/css" href="popup.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 	<div class="kdb-popup-window">
 		<div class="kdb-popup-header">
-			<!-- <h3 id="kdb-popup-label">Annotation has added!</h2> -->
 			<h3 id="kdb-popup-label">Добавлено!</h2>
 			<div id="closeButtonContainer">
 				<a id="closeButton" role="button" aria-label="Close the annotation editor" tabindex="300">
-					<img class="closeButtonIcon" src="images/close.png">
+					<img id="closeButtonIcon" src="images/close.png">
 				</a>
 			</div>
 		</div>
@@ -146,14 +18,13 @@
 			<textarea id="kdb-annotation-note" autofocus=true></textarea>
 			<div class="kdb-popup-tags-list">
 				<div class="kdb-popup-tag">
-					<div class="kdb-circle"></div>
-					<!-- <a class="kdb-tag-color"></a> -->
+					<div class="kdb-tag-color"></div>
 					<a>С++</a>
 				</div>
 			</div>
 		</div>
 		<div class="kdb-popup-footer">
-			<button id="kdb-saveButton" role="button" aria-label="Save edits for this note">Save</button>
+			<button id="kdb-saveButton" role="button" aria-label="Save edits for this note">Сохранить</button>
 		</div>
 	</div>
 </body>

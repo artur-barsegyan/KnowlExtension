@@ -20,5 +20,10 @@
     } ],
     "permissions": [
         "activeTab"
+    ],
+    "web_accessible_resources": [
+        "popup_window.html",
+        "popup.css",
+        "images/*"
     ]
 }
